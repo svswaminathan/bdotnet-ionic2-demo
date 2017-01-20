@@ -7,6 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { SpeakerdetailPage } from '../pages/speakerdetail/speakerdetail';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SpeakersPage } from '../pages/speakers/speakers';
+import { FeedbackPage } from '../pages/feedback/feedback';
+import { Speakersprovider } from '../providers/speakersprovider';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import { SpeakersPage } from '../pages/speakers/speakers';
     HomePage,
     SpeakersPage,
     SpeakerdetailPage,
+    FeedbackPage,
     TabsPage
   ],
   imports: [
@@ -29,8 +32,9 @@ import { SpeakersPage } from '../pages/speakers/speakers';
     HomePage,
     SpeakersPage,
     SpeakerdetailPage,
+    FeedbackPage,
     TabsPage
   ],
-  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
+  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }, Speakersprovider]
 })
 export class AppModule { }
